@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>A00211953 Client Side Assignment 2</title>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<ul id="ul1">
+		<li id="li1"><a class="active" href="index.html">Home</a></li>
+		<li id="li1"><a href="index.html">Commission Rates</a></li>
+		<li id="li1"><a href="index.html">Contact Us</a></li>
+		<li id="li1" style="float: right"><a href="index.html">About</a></li>
+	</ul>
+
+	<header>
+		<img id=header src="images/main.png" style="width: 100%">
+	</header>
+
+	<aside>
+	<div id="main">
+		<a href="http://localhost:8080/Car-Trading-Webpage/rest/cars"
+			onClick="grabFile(this.href); return false;">Search Cars for Sale</a>
+	</div>
+	</aside>
+
+	<section>
+	<div id="displayInfo"><h3>If you have a car that you want to sell please feel free to advertise it's availability. To do so enter your details in the fields below and your car will appear for sale. Similarly if your car has been sold you can remove it using your reference code. Commission rates may apply.</h3></div>
+	<div id="displayImage"><img src="images/pic.png" height="298px;" width="width: 635px;" style= "float:right"/></div>
+	</section>
+
+<nav>
+	<article>
+		<form>
+			<ul>
+				<li><label for="id">Ref No: </label> <input type="text" name="id"
+					id="id" placeholder="eg 1869203" required></li>
+				<li><label for="make">Make: </label> <input type="text"
+					name="make" id="make" placeholder="eg Mazda" required></li>
+				<li><label for="model">Model: </label> <input type="text"
+					name="model" id="model" placeholder="eg rx-7" required></li>
+				<li><label for="year">Year: </label> <input type="text"
+					name="year" id="year" placeholder="eg 2015" required></li>
+				<li><label for="engine">Engine: </label> <input type="text"
+					name="engine" id="engine" placeholder="eg 2.0" required></li>
+				<li><label for="fuel">Fuel: </label> <input type="text"
+					name="fuel" id="fuel" placeholder="eg Petrol" required></li>
+				<li><label for="price">Price: </label> <input type="text"
+					name="price" id="price" placeholder="eg €20,000" required></li>
+				<li><input type="button" id="button"
+					onClick="AddCar();window.location.reload();grabFile(); return false;"
+					value="Advertise Car"></li>
+			</ul>
+		</form>
+	</article>
+
+	<div id="delete">
+	<form>
+		<label for="delId">Enter id:</label> <input type="text" name="delId"
+			id="delId"> <input type="button" id="buttonDel"
+			onClick="DeleteCar();window.location.reload()" value="Remove Car">
+	</form></div>
+</nav>
+
+	<footer>
+		<p class="right" id="copyright">&copy; A00211953 Brian Mahon</p>
+	</footer>
+</body>
+</html>
